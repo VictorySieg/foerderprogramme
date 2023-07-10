@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230709 19:06:56.650" rpa="false" schemaversion="4">
+<suite id="s1" name="Foerderprogramme" source="C:\robot\foerderungprogramme\tests\foerderprogramme.robot">
+<test id="s1-t1" name="zehn Programme Uberprufen" line="17">
+<kw name="create session">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230709 19:06:57.102" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg timestamp="20230709 19:06:57.103" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230709 19:06:57.103" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'</msg>
+<status status="FAIL" starttime="20230709 19:06:57.100" endtime="20230709 19:06:57.114"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230709 19:06:57.114" endtime="20230709 19:06:57.114"/>
+</kw>
+<status status="FAIL" starttime="20230709 19:06:57.100" endtime="20230709 19:06:57.115"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230709 19:06:57.115" endtime="20230709 19:06:57.116"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230709 19:06:57.116" endtime="20230709 19:06:57.116"/>
+</kw>
+<kw name="close session">
+<status status="NOT RUN" starttime="20230709 19:06:57.116" endtime="20230709 19:06:57.116"/>
+</kw>
+<status status="FAIL" starttime="20230709 19:06:57.098" endtime="20230709 19:06:57.117">TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'</status>
+</test>
+<status status="FAIL" starttime="20230709 19:06:56.653" endtime="20230709 19:06:57.119"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Foerderprogramme">Foerderprogramme</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

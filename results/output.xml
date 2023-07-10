@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230710 22:23:20.189" rpa="false" schemaversion="4">
+<suite id="s1" name="Foerderungprogramme" source="C:\robot\foerderungprogramme">
+<suite id="s1-s1" name="Tests" source="C:\robot\foerderungprogramme\tests">
+<suite id="s1-s1-s1" name="Förderprogramme" source="C:\robot\foerderungprogramme\tests\förderprogramme.robot">
+<test id="s1-s1-s1-t1" name="Überprüfen, ob die Filterfunktion korrekt funktioniert, wenn ein Schreibfilter angewendet wird" line="17">
+<kw name=" create session">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://eg-stage.proandi.de/foerderfinderangebote/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230710 22:23:20.683" level="INFO">Opening browser 'chrome' to base url 'https://eg-stage.proandi.de/foerderfinderangebote/'.</msg>
+<msg timestamp="20230710 22:23:20.699" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230710 22:23:20.682" endtime="20230710 22:23:27.028"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230710 22:23:27.029" endtime="20230710 22:23:27.361"/>
+</kw>
+<status status="PASS" starttime="20230710 22:23:20.681" endtime="20230710 22:23:27.363"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=suche</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230710 22:23:27.364" endtime="20230710 22:23:27.955"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=suche</arg>
+<arg>nakopa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230710 22:23:27.958" level="INFO">Typing text 'nakopa' into text field 'id=suche'.</msg>
+<status status="PASS" starttime="20230710 22:23:27.956" endtime="20230710 22:23:28.205"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=(//div[text()='Nakopa - Nachhaltige Kommunalentwicklung durch Partnerschaftsprojekte'])[1]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230710 22:23:28.206" endtime="20230710 22:23:28.266"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${expectedText}</var>
+<arg>Nakopa</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230710 22:23:28.267" level="INFO">${expectedText} = Nakopa</msg>
+<status status="PASS" starttime="20230710 22:23:28.267" endtime="20230710 22:23:28.268"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=(//div[text()='Nakopa - Nachhaltige Kommunalentwicklung durch Partnerschaftsprojekte'])[1]</arg>
+<arg>${expectedText}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230710 22:23:28.316" level="INFO">Element 'xpath=(//div[text()='Nakopa - Nachhaltige Kommunalentwicklung durch Partnerschaftsprojekte'])[1]' contains text 'Nakopa'.</msg>
+<status status="PASS" starttime="20230710 22:23:28.268" endtime="20230710 22:23:28.316"/>
+</kw>
+<kw name="close session">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230710 22:23:28.319" endtime="20230710 22:23:34.776"/>
+</kw>
+<status status="PASS" starttime="20230710 22:23:28.318" endtime="20230710 22:23:34.777"/>
+</kw>
+<status status="PASS" starttime="20230710 22:23:20.680" endtime="20230710 22:23:34.778"/>
+</test>
+<test id="s1-s1-s1-t2" name="Überprüfen, ob die Filterfunktion korrekt funktioniert, wenn auf einen Filterbereich geklickt wird" line="27">
+<kw name=" create session">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://eg-stage.proandi.de/foerderfinderangebote/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230710 22:23:34.785" level="INFO">Opening browser 'chrome' to base url 'https://eg-stage.proandi.de/foerderfinderangebote/'.</msg>
+<msg timestamp="20230710 22:23:34.800" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230710 22:23:34.784" endtime="20230710 22:23:40.023"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230710 22:23:40.023" endtime="20230710 22:23:40.291"/>
+</kw>
+<status status="PASS" starttime="20230710 22:23:34.783" endtime="20230710 22:23:40.293"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[text()='Landesförderprogramme NRW']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230710 22:23:40.293" endtime="20230710 22:23:40.878"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='Landesförderprogramme NRW']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230710 22:23:40.883" level="INFO">Clicking element 'xpath=//span[text()='Landesförderprogramme NRW']'.</msg>
+<status status="PASS" starttime="20230710 22:23:40.881" endtime="20230710 22:23:41.009"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=(//div[text()='EpIB - Entwicklungspolitische Informations- und Bildungsarbeit'])[1]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230710 22:23:41.010" endtime="20230710 22:23:41.114"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${expectedText}</var>
+<arg>Entwicklungspolitische Informations- und Bildungsarbeit</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230710 22:23:41.115" level="INFO">${expectedText} = Entwicklungspolitische Informations- und Bildungsarbeit</msg>
+<status status="PASS" starttime="20230710 22:23:41.115" endtime="20230710 22:23:41.116"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=(//div[text()='EpIB - Entwicklungspolitische Informations- und Bildungsarbeit'])[1]</arg>
+<arg>${expectedText}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230710 22:23:41.175" level="INFO">Element 'xpath=(//div[text()='EpIB - Entwicklungspolitische Informations- und Bildungsarbeit'])[1]' contains text 'Entwicklungspolitische Informations- und Bildungsarbeit'.</msg>
+<status status="PASS" starttime="20230710 22:23:41.117" endtime="20230710 22:23:41.176"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${expectedText2}</var>
+<arg>Auslandsprojekte NRW</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230710 22:23:41.188" level="INFO">${expectedText2} = Auslandsprojekte NRW</msg>
+<status status="PASS" starttime="20230710 22:23:41.186" endtime="20230710 22:23:41.189"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>(//div[text()='AP - Auslandsprojekte NRW'])[1]</arg>
+<arg>${expectedText2}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230710 22:23:41.292" level="INFO">Element '(//div[text()='AP - Auslandsprojekte NRW'])[1]' contains text 'Auslandsprojekte NRW'.</msg>
+<status status="PASS" starttime="20230710 22:23:41.191" endtime="20230710 22:23:41.292"/>
+</kw>
+<kw name="close session">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230710 22:23:41.294" endtime="20230710 22:23:47.745"/>
+</kw>
+<status status="PASS" starttime="20230710 22:23:41.293" endtime="20230710 22:23:47.746"/>
+</kw>
+<status status="PASS" starttime="20230710 22:23:34.781" endtime="20230710 22:23:47.751"/>
+</test>
+<test id="s1-s1-s1-t3" name="Überprüfen, ob der Startmenü-Button korrekt funktioniert" line="39">
+<kw name=" create session">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://eg-stage.proandi.de/foerderfinderangebote/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230710 22:23:47.757" level="INFO">Opening browser 'chrome' to base url 'https://eg-stage.proandi.de/foerderfinderangebote/'.</msg>
+<msg timestamp="20230710 22:23:47.773" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230710 22:23:47.756" endtime="20230710 22:23:53.034"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230710 22:23:53.035" endtime="20230710 22:23:53.337"/>
+</kw>
+<status status="PASS" starttime="20230710 22:23:47.755" endtime="20230710 22:23:53.338"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=li_start</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230710 22:23:53.339" endtime="20230710 22:23:53.928"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=li_start</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230710 22:23:53.930" level="INFO">Clicking element 'id=li_start'.</msg>
+<status status="PASS" starttime="20230710 22:23:53.929" endtime="20230710 22:23:54.354"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualText}</var>
+<arg>xpath=//strong[text()='Herzlich willkommen bei der Förderprojektsoftware von Engagement Global']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230710 22:23:54.416" level="INFO">${actualText} = Herzlich willkommen bei der Förderprojektsoftware von Engagement Global</msg>
+<status status="PASS" starttime="20230710 22:23:54.355" endtime="20230710 22:23:54.417"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${expectedText}</var>
+<arg>Herzlich willkommen bei der Förderprojektsoftware von Engagement Global</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230710 22:23:54.422" level="INFO">${expectedText} = Herzlich willkommen bei der Förderprojektsoftware von Engagement Global</msg>
+<status status="PASS" starttime="20230710 22:23:54.421" endtime="20230710 22:23:54.424"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${expectedText}</arg>
+<arg>${actualText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230710 22:23:54.427" endtime="20230710 22:23:54.428"/>
+</kw>
+<kw name="close session">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230710 22:23:54.430" endtime="20230710 22:24:00.905"/>
+</kw>
+<status status="PASS" starttime="20230710 22:23:54.429" endtime="20230710 22:24:00.906"/>
+</kw>
+<status status="PASS" starttime="20230710 22:23:47.753" endtime="20230710 22:24:00.906"/>
+</test>
+<status status="PASS" starttime="20230710 22:23:20.247" endtime="20230710 22:24:00.909"/>
+</suite>
+<status status="PASS" starttime="20230710 22:23:20.240" endtime="20230710 22:24:00.913"/>
+</suite>
+<status status="PASS" starttime="20230710 22:23:20.201" endtime="20230710 22:24:00.917"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Foerderungprogramme">Foerderungprogramme</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Tests">Foerderungprogramme.Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="Förderprogramme">Foerderungprogramme.Tests.Förderprogramme</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
